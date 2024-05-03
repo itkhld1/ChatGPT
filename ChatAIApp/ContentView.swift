@@ -14,7 +14,8 @@ final class ViewModel: ObservableObject {
     private var OpenAI: OpenAISwift?
     
     func setup() {
-        //OpenAI = OpenAISwift(authToken: "TOKEN")
+        // You can paste the token you copy in the "TOKEN"
+        // OpenAI = OpenAISwift(authToken: "TOKEN")
         }
     
     func send(text: String, completion: @escaping (String) -> Void) {
