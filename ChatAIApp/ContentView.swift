@@ -14,7 +14,10 @@ final class ViewModel: ObservableObject {
     private var OpenAI: OpenAISwift?
     
     func setup() {
-        // You can paste the token you copy in the "TOKEN"
+
+        // YOU CAN CREATE YOUR API KEY FROM THIS SITE https://platform.openai.com/api-keys
+        // YOU CAN PASTE THE API KEY YOU CREATED IN THE "TOKEN"
+        
         // OpenAI = OpenAISwift(authToken: "TOKEN")
         }
     
