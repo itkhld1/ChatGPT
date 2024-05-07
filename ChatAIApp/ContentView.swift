@@ -39,20 +39,24 @@ struct ContentView: View {
     @State var text = ""
     @State var models = [String]()
     
-    var body: some View {
-        VStack(alignment: .leading){
-            ForEach(models, id: \.self) { string in
-                Text(string)
-            }
-            
-            Spacer()
-            
-            HStack {
-                TextField("Type here...", text: $text)
-                Button("Send") {
-                    send()
+        NavigationView {
+            VStack(alignment: .leading){
+                ForEach(models, id: \.self) { string in
+                    Text(string)
+                }
+                Spacer()
+                
+                HStack {
+                    TextField("Type here...", text: $text)
+                    Button("Send") {
+                        send()
+                    }
+                    .buttonStyle(.bordered)
+                    .foregroundColor(.blue)
                 }
             }
+            .navigationTitle("ChatGPT")
+            .padding()
         }
         .onAppear {
             viewModel.setup()
